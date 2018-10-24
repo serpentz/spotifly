@@ -1,5 +1,5 @@
 <% if @user.errors.any? %>
-   
+
       <ul>
         <% @user.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -8,15 +8,19 @@
 
   <% end %>
 
-<ul>
-<%= form_for @user do |t|%>
-<%= t.label :username %>
-<%= t.text_field :username %>
-<%= t.label :password %>
-<%= t.text_field :password %>
-<br>
-</ul>
-<%= t.submit  %>
+  <div class="login_div">
+  <%= form_for :user do |t|%>
+  <div class="login_form center" >
+    <ul class="center">
+  <%=t.label :username%>
+  <%= t.text_field :username%>
+  <br>
+  <%=t.label :password%>
+  <%= t.text_field :password%>
+  <br><br>
+  <%= t.submit "Register" %>
 
-<%end%>
-
+    </ul>
+  </div>
+  <%end%>
+  </div>
