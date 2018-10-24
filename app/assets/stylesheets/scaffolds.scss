@@ -1,13 +1,13 @@
 body {
 
-  // background-image: image-url('fire_breathing2.jpeg');
+  background-image: image-url('geekpic.png');
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: #3498db;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 18px;
 }
 
@@ -58,25 +58,27 @@ div {
    position: absolute;
 
    width: 300px;
-   height: 300px;
+   height: 50%;
 
    /* Center form on page horizontally & vertically */
    top: 50%;
    left: 50%;
-   margin-top: -150px;
-   margin-left: -150px;
+   margin: auto;
+
 }
 
   .login_form {
    display: flex;
    // height: 300px;
+   padding-bottom: 10%;
+   padding-top: 10%;
 
    background: white;
    border-radius: 10px;
    vertical-align: middle;
    horizontal-align: middle;
    margin: auto;
-   width: 30%;
+   width: 20%;
    height: 30%;
  }
 
