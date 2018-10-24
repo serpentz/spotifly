@@ -1,4 +1,5 @@
 class Song < ApplicationRecord
-	has_many :playlists
-	has_many :votes
+	belongs_to :playlist, optional: true
+	has_many :user_votes
+	has_many :votes, through: :user_votes
 end

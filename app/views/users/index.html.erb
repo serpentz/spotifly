@@ -1,16 +1,16 @@
-<div class="login_div">
-<%= form_for :user, url:  check_creds_path , method: :post do |t|%>
-<div class="login_form center" >
-  <ul class="center">
+<div class="">
+<%= form_for :user, :html => {:class => "contact100-form"}, url:  check_creds_path , method: :post do |t|%>
+
+    <div class="font_xxlarge">Welcome</h1></div><br>
 <%=t.label :username%>
 <%= t.text_field :username%>
 <br>
 <%=t.label :password%>
 <%= t.text_field :password%>
 <br><br>
-<%= t.submit "Login" %>
-<%= link_to "Register", new_user_path %>
+<%= t.submit "Login" %><br><br>
+<div class="font_small">Don't have an account?</div>
+<%= link_to "Click to Register", new_user_path %>
   </ul>
-</div>
 <%end%>
 </div>
