@@ -11,4 +11,8 @@ require 'pry'
 # user_hash = {username: "serpentz", password: "password"}
 
 
-playlist1= Playlist.create(name: "party1", passphrase:)
+user = User.find_or_create_by(username: "serpentz", password: "password")
+playlist = Playlist.find_or_create_by(name: "party", passphrase: "password")
+# song = Song.create()
+
+binding.pry
