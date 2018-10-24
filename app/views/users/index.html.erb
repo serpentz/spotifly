@@ -1,7 +1,7 @@
 <div class="login_div">
 <%= form_for :user, url:  check_creds_path , method: :post do |t|%>
-<div class="login_form">
-  <ul>
+<div class="login_form center" >
+  <ul class="center">
 <%=t.label :username%>
 <%= t.text_field :username%>
 <br>
