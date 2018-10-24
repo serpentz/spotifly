@@ -1,0 +1,11 @@
+<%= form_for :user, url:  check_creds_path , method: :post do |t|%>
+<ul>
+<%=t.label :username%>
+<%= t.text_field :username%>
+<br>
+<%=t.label :password%>
+<%= t.text_field :password%>
+</ul>
+<%= t.submit %>
+<%= link_to "Register", new_user_path %>
+<%end%>
