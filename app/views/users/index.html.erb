@@ -1,11 +1,16 @@
+<div class="login_div">
 <%= form_for :user, url:  check_creds_path , method: :post do |t|%>
-<ul>
+<div class="login_form">
+  <ul>
 <%=t.label :username%>
 <%= t.text_field :username%>
 <br>
 <%=t.label :password%>
 <%= t.text_field :password%>
-</ul>
+<br><br>
 <%= t.submit %>
 <%= link_to "Register", new_user_path %>
+  </ul>
+</div>
 <%end%>
+</div>
