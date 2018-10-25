@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		if (@user.playlist)
-			redirect_to @user.playlist
+			redirect_to playlists_path 
 		end
 	end
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 		@user = User.find_by(user_login_params)
 		if @user 
 			session[:user_id] = @user.id
-		
+
 		 	redirect_to @user 
 		 else
 		  render :index
