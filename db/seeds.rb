@@ -16,3 +16,4 @@ playlist = Playlist.find_or_create_by(name: "party", passphrase: "password")
 # song = Song.create()
 
 binding.pry
+0

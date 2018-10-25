@@ -17,13 +17,6 @@ ActiveRecord::Schema.define(version: 2018_10_24_180417) do
     t.string "passphrase"
   end
 
-  create_table "song_votes", force: :cascade do |t|
-    t.integer "song_id"
-    t.integer "vote_id"
-    t.index ["song_id"], name: "index_song_votes_on_song_id"
-    t.index ["vote_id"], name: "index_song_votes_on_vote_id"
-  end
-
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.string "artist_name"
@@ -42,8 +35,8 @@ ActiveRecord::Schema.define(version: 2018_10_24_180417) do
   create_table "votes", force: :cascade do |t|
     t.boolean "upvote"
     t.boolean "downvote"
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_votes_on_user_id"
+    t.integer "song_id"
+    t.index ["song_id"], name: "index_votes_on_song_id"
   end
 
 end
