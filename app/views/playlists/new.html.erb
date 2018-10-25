@@ -33,9 +33,10 @@
   }
   </style>
   <body>
-    <div>
+    <div class="text">
     <h1>Create a Playlist</h1>
-
+  </div>
+    <div class="font_medium">
     <%= form_for @playlist do |t|%>
 
     <%=t.label :name%>
@@ -46,7 +47,10 @@
     <br><br>
     <%= t.submit "Create Playlist " %>
     <%end%>
+    <a target="_blank" href="http://localhost:3000/">
+      <div class="gallery"><img></div>
   </div>
+</div>
   </body>
   </html>
 
@@ -62,8 +66,6 @@
     <br><br>
     <%= t.submit "Login" %>
     <div class="font_medium">Don't have an account? <%= link_to "Click to Register", new_user_path %></div>
-  <a target="_blank" href="http://localhost:3000/">
-    <div class="gallery"><img></div>
       <%end%>
     </div>
   </body>

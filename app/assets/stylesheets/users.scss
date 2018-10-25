@@ -31,6 +31,7 @@ body {
 div.gallery {
   background-image: image-url("logo.png");
   background-size: 100%;
+  background-repeat: no-repeat;
     // margin: 10px;
     display: block;
    margin-left: auto;
@@ -38,7 +39,7 @@ div.gallery {
     border: 1px solid #0D47A1;
     float: center;
     width: 250px;
-    height: 150px;
+    height: 120px;
     border-radius: 3%;
 }
 
