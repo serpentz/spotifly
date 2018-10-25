@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2018_10_24_180417) do
   create_table "votes", force: :cascade do |t|
     t.boolean "upvote"
     t.boolean "downvote"
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_votes_on_user_id"
+    t.integer "song_id"
+    t.index ["song_id"], name: "index_votes_on_song_id"
   end
 
 end

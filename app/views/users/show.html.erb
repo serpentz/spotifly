@@ -1,11 +1,12 @@
-<<<<<<< HEAD
-<show>
+
+<%if @user.playlist %>
+
+<%= render 'playlist', playlist: @user.playlist %>
+
+<%else%>
 
 
+<%=render 'prompt'%>
 
+<%end%>
 
-
-</show>
-=======
-<%=@user.username%>
->>>>>>> 5b9498eba6e4f1bf950aa219c0ddaf1d770ff3e6

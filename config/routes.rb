@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 # get "users/register", to: 'users#register', as: 'register'
 post "users/new", to: 'users#create'
 
-resources :users, only: [:new]
+resources :users, only: [:new,:show]
 resources :playlists, only: [:new, :create]
 
 

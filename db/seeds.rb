@@ -18,7 +18,7 @@ playlist3 = Playlist.find_or_create_by(name: "festival", passphrase: "blahblah")
 playlist4 = Playlist.find_or_create_by(name: "dance", passphrase: "tiger")
 playlist5 = Playlist.find_or_create_by(name: "for cooking", passphrase: "pestoforpasta")
 
-# song = Song.create()
+
 song1 = Song.find_or_create_by(title: "Girls Like You", artist_name: "Maroon5 Featuring Cardi B")
 song2 = Song.find_or_create_by(title: "Lucid Dreams", artist_name: "Juice WRLD")
 song3 = Song.find_or_create_by(title: "Better Now", artist_name: "Post Malone")
@@ -33,9 +33,11 @@ song11 = Song.find_or_create_by(title: "I Like It", artist_name: "CardiB, Bad Bu
 song12 = Song.find_or_create_by(title: "Natural", artist_name: "Imagine Dragons")
 song13 = Song.find_or_create_by(title: "Love Lies", artist_name: "Khalid & Normandi")
 
-
 user1 = User.find_or_create_by(username: "music123", password: "abcdefg", premium: true)
 user2 = User.find_or_create_by(username: "kwest", password: "iloveit", premium: false)
 user3 = User.find_or_create_by(username: "serpentz", password: "spacebar", premium: true)
 user4 = User.find_or_create_by(username: "pasolre95kim", password: "mypassword", premium: true)
 user5 = User.find_or_create_by(username: "myusername", password: "yourpassword", premium: false)
+
+binding.pry
+0
