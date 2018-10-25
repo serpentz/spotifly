@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		if (@user.playlist)
-			redirect_to @user.playlist
+			redirect_to playlists_path
 		end
 	end
 
