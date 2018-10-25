@@ -1,1 +1,14 @@
 <h1>Create a Playlist</h1>
+
+<%= form_for @playlist do |t|%>
+  
+  <%=t.label :name%>
+  <%= t.text_field :name%>
+  <br>
+  <%=t.label :passphrase%>
+  <%= t.text_field :passphrase%>
+  <br><br>
+  <%= t.submit "Create " %>
+
+
+  <%end%>
