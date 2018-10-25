@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 post "users/new", to: 'users#create'
 get  "playlists/join", to: 'playlists#join_form', as: 'join_playlist'
 post "playlists/join", to: 'playlists#join'
-delete "songs/join", to: 'song#destroy'. as: 'delete_song_path'
+delete "songs/join", to: 'song#destroy', as: 'delete_song_path'
 
 resources :users, only: [:new,:show]
 resources :playlists, only: [:new, :create, :index]

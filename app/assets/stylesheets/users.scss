@@ -2,15 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background-image: image-url('picture1.jpeg');
+  background-image: image-url('pastel.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: white;
+  background-color: black;
   color: #333;
   margin: 40px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 15px;
   line-height: 18px;
 
+}
+.label {
+    color: e7e7e7;
+    padding: 10px;
+    font-family: Arial;
+    text-align: center;
+    font-size: 20px;
+}
+.success {background-color: #4CAF50;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */
+.other {background-color: #e7e7e7; color: black;} /* Gray */
+.white {background-color: white;}
 
+
+div.gallery {
+  background-image: image-url("logo.png");
+  background-size: 100%;
+    // margin: 10px;
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+    border: 1px solid #0D47A1;
+    float: center;
+    width: 250px;
+    height: 150px;
+    border-radius: 3%;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
+// <a target="_blank" href="http://localhost:3000/" >
+//   <div class="gallery"><img></div>
+div {
+
+  font-family:"Comic Sans MS", Comic Sans, cursive;
+  // " Chalkduster", fantasy;
+  text-align: center;
+.font_small {
+   font-size:small;
+   color: white;
+ }
+ .font_medium {
+   font-size:medium;
+   color: #0D47A1;
+ }
+ .font_large{
+   font-size:large;
+ }
+
+ .font_xlarge{
+   font-size:x-large;
+ }
+ .font_xxlarge {
+   font-size:xx-large;
+   color: #303034;
+ }
 }
