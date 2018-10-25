@@ -27,15 +27,17 @@ class UsersController < ApplicationController
 
 	def check_creds
 		@user = User.find_by(user_login_params)
-		
 		if @user 
-		 redirect_to @user 
+			session[:user_id] = @user.id
+		
+		 	redirect_to @user 
 		 else
-		  render :login
+		  render :index
 		end
 	end
-
+	
 	private 
+
 
 		def user_login_params
 
@@ -43,5 +45,5 @@ class UsersController < ApplicationController
 
 		end
 
-	
+
 end

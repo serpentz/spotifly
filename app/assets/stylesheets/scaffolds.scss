@@ -1,13 +1,15 @@
+
+
 body {
 
-  // background-image: image-url('fire_breathing2.jpeg');
+  background-image: image-url('geekpic.png');
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: #3498db;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 18px;
 }
 
@@ -17,10 +19,10 @@ p, ol, ul, td {
   line-height: 18px;
   margin: 30px;
 
-  .center {
-    border: 3px solid green;
-    text-align: center;
-}
+//   .center {
+//     border: 3px solid green;
+//     text-align: center;
+// }
 }
 
 pre {
@@ -50,36 +52,285 @@ td {
   padding: 0 5px 7px;
 }
 
+div.gallery {
+  background-image: image-url("logo.png");
+  background-size: 100%;
+    // margin: 10px;
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+    border: 1px solid #ccc;
+    float: center;
+    width: 200px;
+    height: 100px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
 div {
+
   &.field, &.actions {
     margin-bottom: 10px;
   }
+
+  // img {
+  //   background-image: image-url("logo.png");
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   position: absolute;
+  //   width: 20%;
+  //   height: 20%;
+  //   left: 0px;
+  //   top: 0px;
+  //   z-index: -1;
+  // }
   .login_div {
    position: absolute;
 
-   width: 300px;
-   height: 300px;
+   width: 20%;
+   height: 50%;
 
    /* Center form on page horizontally & vertically */
-   top: 50%;
-   left: 50%;
-   margin-top: -150px;
-   margin-left: -150px;
+   top: 35%;
+   left: 35%;
+    right: 35%;
+   botton: 35%;
+   margin: 10px;
+
 }
 
   .login_form {
-   display: flex;
-   // height: 300px;
+   // display: flex;
+   width: 22%;
+   height: 30%;
+   padding: 45%;
+   padding-bottom: 5%;
+   padding-top: 4%;
+   // padding-left: 9%;
+
+  text-align: left;
 
    background: white;
    border-radius: 10px;
    vertical-align: middle;
    horizontal-align: middle;
    margin: auto;
-   width: 30%;
-   height: 30%;
+
  }
 
+ .font_small {
+    font-size:small;
+  }
+  .font_medium {
+    font-size:medium;
+  }
+  .font_large{
+    font-size:large;
+  }
+
+  .font_xlarge{
+    font-size:x-large;
+  }
+  .font_xxlarge {
+    font-size:xx-large;
+  }
+}
+.container {
+    max-width: 1200px;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Contact ]*/
+
+.container-contact100 {
+ width: 100%;
+ min-height: 100vh;
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -moz-box;
+ display: -ms-flexbox;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ padding: 15px;
+ position: relative;
+ background-color: #f2f2f2;
+}
+
+.wrap-contact100 {
+ width: 550px;
+ background: transparent;
+ padding: 50px 0px 160px 0px;
+}
+
+
+/*==================================================================
+[ Form ]*/
+
+.contact100-form {
+ width: 100%;
+ text-align: center;
+ color: white;
+}
+
+.contact100-form-title {
+ display: block;
+ font-family: Ubuntu-Bold;
+ font-size: 30px;
+ color: #403866;
+ line-height: 1.2;
+ text-transform: uppercase;
+ text-align: center;
+ padding-bottom: 49px;
+}
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+ width: 100%;
+ background-color: #fff;
+ border-radius: 31px;
+ margin-bottom: 16px;
+ position: relative;
+ z-index: 1;
+}
+
+.input100 {
+ position: relative;
+ display: block;
+ width: 100%;
+ background: #fff;
+ border-radius: 31px;
+ font-family: Ubuntu-Bold;
+ font-size: 18px;
+ color: #8f8fa1;
+ line-height: 1.2;
+}
+
+
+/*---------------------------------------------*/
+input.input100 {
+ height: 62px;
+ padding: 0 35px 0 35px;
+}
+
+
+textarea.input100 {
+ min-height: 169px;
+ padding: 19px 35px 0 35px;
+}
+
+/*------------------------------------------------------------------
+[ Focus Input ]*/
+
+.focus-input100 {
+ display: block;
+ position: absolute;
+ z-index: -1;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 50%;
+ -webkit-transform: translateX(-50%);
+ -moz-transform: translateX(-50%);
+ -ms-transform: translateX(-50%);
+ -o-transform: translateX(-50%);
+ transform: translateX(-50%);
+ border-radius: 31px;
+ background-color: #fff;
+ pointer-events: none;
+
+ -webkit-transition: all 0.4s;
+ -o-transition: all 0.4s;
+ -moz-transition: all 0.4s;
+ transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100 {
+ width: calc(100% + 20px);
+}
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-contact100-form-btn {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -moz-box;
+ display: -ms-flexbox;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ padding-top: 10px;
+}
+
+.contact100-form-btn {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -moz-box;
+ display: -ms-flexbox;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 0 20px;
+ min-width: 150px;
+ height: 62px;
+ background-color: transparent;
+ border-radius: 31px;
+
+ font-family: Ubuntu-Bold;
+ font-size: 16px;
+ color: #fff;
+ line-height: 1.2;
+ text-transform: uppercase;
+
+ -webkit-transition: all 0.4s;
+ -o-transition: all 0.4s;
+ -moz-transition: all 0.4s;
+ transition: all 0.4s;
+ position: relative;
+ z-index: 1;
+}
+
+.contact100-form-btn::before {
+ content: "";
+ display: block;
+ position: absolute;
+ z-index: -1;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 50%;
+ -webkit-transform: translateX(-50%);
+ -moz-transform: translateX(-50%);
+ -ms-transform: translateX(-50%);
+ -o-transform: translateX(-50%);
+ transform: translateX(-50%);
+ border-radius: 31px;
+ background-color: #827ffe;
+ pointer-events: none;
+
+ -webkit-transition: all 0.4s;
+ -o-transition: all 0.4s;
+ -moz-transition: all 0.4s;
+ transition: all 0.4s;
+}
+
+.contact100-form-btn:hover:before {
+ background-color: #403866;
+ width: calc(100% + 20px);
 }
 
 #notice {

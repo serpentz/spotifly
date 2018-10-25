@@ -12,6 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2018_10_24_180417) do
 
+  create_table "playlist_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "playlist_id"
+    t.index ["playlist_id"], name: "index_playlist_users_on_playlist_id"
+    t.index ["user_id"], name: "index_playlist_users_on_user_id"
+  end
+
   create_table "playlists", force: :cascade do |t|
     t.string "name"
     t.string "passphrase"
@@ -20,16 +27,14 @@ ActiveRecord::Schema.define(version: 2018_10_24_180417) do
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.string "artist_name"
-    t.integer "playlist_id"
-    t.index ["playlist_id"], name: "index_songs_on_playlist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
-    t.integer "playlist_id"
     t.boolean "premium"
-    t.index ["playlist_id"], name: "index_users_on_playlist_id"
   end
 
   create_table "votes", force: :cascade do |t|

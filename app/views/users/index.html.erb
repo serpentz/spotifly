@@ -1,16 +1,54 @@
-<div class="login_div">
-<%= form_for :user, url:  check_creds_path , method: :post do |t|%>
-<div class="login_form center" >
-  <ul class="center">
-<%=t.label :username%>
-<%= t.text_field :username%>
-<br>
-<%=t.label :password%>
-<%= t.text_field :password%>
-<br><br>
-<%= t.submit %>
-<%= link_to "Register", new_user_path %>
-  </ul>
-</div>
-<%end%>
-</div>
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #ff5252;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #d50000;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+
+<div>
+  <%= form_for :user, url:  check_creds_path , method: :post do |t|%>
+
+  <div class="font_xxlarge">Welcome to Spotifly</div><br>
+  <%=t.label :username%>
+  <%= t.text_field :username, placeholder:"Your username..."%>
+  <br>
+  <%=t.label :password%>
+  <%= t.text_field :password, placeholder:"Your password..."%>
+  <br><br>
+  <%= t.submit "Login" %>
+  <div class="font_medium">Don't have an account? <%= link_to "Click to Register", new_user_path %></div>
+<a target="_blank" href="http://localhost:3000/">
+  <div class="gallery"><img></div>
+    <%end%>
+  </div>
+</body>
+</html>
