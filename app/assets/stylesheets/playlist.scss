@@ -29,32 +29,25 @@ body {
 
 
 div.gallery {
-
   background-image: image-url("logo.png");
   background-size: 100%;
   background-repeat: no-repeat;
 
-    // display: block;
-   margin: auto 20px;
-   width: 150px;
-   height: 100px;
-   border-radius: 2%;
+    display: block;
+   margin: auto 2%;
+   width: 4%;
+   height: 8%;
+   border-radius: 3%;
 
 }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 1% solid #777;
 }
 
 
-
-// <a target="_blank" href="http://localhost:3000/" >
-//   <div class="gallery"><img></div>
 div {
-
-  font-family:"Comic Sans MS", Comic Sans, cursive;
-  // " Chalkduster", fantasy;
-  text-align: center;
+font-family:"Comic Sans MS", Comic Sans, cursive;
 .font_small {
    font-size:small;
    color: black;
@@ -81,24 +74,24 @@ div.text {
   text-align: center;
 }
 
- div.wrapper {
-   position:  absolute;
-   top : 200px;
-   left: 550px;
-   width: 300px;
-   height:300px;
-   border:1px solid black;
-   padding-left: 6%;
-   background-color: #f2f2f2;
-   // padding-bottom: 10%;
+div.wrapper {
 
-     // width: 300px;
-     // height:300px;
-     // border:1px solid black;
-     // padding-left: 10%;
-     // padding-bottom: 12%;
- }
+  border:1px solid black;
+  padding-right: 5%;
+  background-color: #f2f2f2;
+  padding-right: 2%;
+  padding-bottom: 25%;
 
+  position:fixed;
+   top: 20%;
+   left: 50%;
+   width:30em;
+   height:18em;
+   margin-top: -9em; /*set to a negative number 1/2 of your height*/
+   margin-left: -15em; /*set to a negative number 1/2 of your width*/
+   border: 1px solid #ccc;
+   background-color: #f3f3f3;
+}
 
  input[type="text"] {
       display: block;

@@ -3,9 +3,7 @@ require 'rest-client'
 require 'pry'
 
 class SongsController < ApplicationController
-    skip_before_action :verify_authenticity_token
-  
-  URL_SEARCH = "https://api.spotify.com/v1/search"
+
 
   # GET /songs
   # GET /songs.json

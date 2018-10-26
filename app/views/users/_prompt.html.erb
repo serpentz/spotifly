@@ -1,12 +1,79 @@
-<div><br>
-<div class="font_xxlarge"><h2>Please select an option</h2></div>
-<br><br>
-<div class="font_xxlarge">
-<%= link_to "Create A playlist", new_playlist_path %><br>
-<br><br><br>
+<!DOCTYPE html>
+<html>
+<style>
 
-<%= link_to "Join A playlist", join_playlist_path %></div>
-<br><br><br>
-<a href="http://localhost:3000/">
-  <div class="gallery"><img></div>
+div.wrapper {
+
+  border:1px solid black;
+  padding-right: 5%;
+  background-color: #f2f2f2;
+  padding-right: 2%;
+  padding-bottom: 25%;
+  border-radius: 3%;
+
+  position:fixed;
+   top: 20%;
+   left: 50%;
+   width:30em;
+   height:18em;
+   margin-top: -9em; /*set to a negative number 1/2 of your height*/
+   margin-left: -15em; /*set to a negative number 1/2 of your width*/
+   border: 1px solid #ccc;
+   background-color: #f3f3f3;
+}
+
+.button {
+    background-color: #ff5252;
+    border-radius: 5%;
+    color: white;
+    padding: 4% 20%;
+    text-align: center;
+
+    display: inline-block;
+    font-size: medium;
+    cursor: pointer;
+
+}
+.button:hover{
+  background-color: #d50000;
+}
+
+div {
+    font-family:"Comic Sans MS", Comic Sans, cursive;
+    color: white;
+}
+
+.font_large{
+  font-size:large;
+}
+
+.font_xlarge{
+  font-size:x-large;
+  color: black;
+}
+
+h2 {
+  color: black;
+  font-size: font_large;
+  font-family:"Comic Sans MS", Comic Sans, cursive;
+}
+
+</style>
+<body>
+
+
+  <div class="wrapper">
+    <br><br>
+    <h2>Please select an option</h2>
+    <br><br>
+
+  <button class="button"><%= link_to "Create A playlist", new_playlist_path %></button><br>
+  <br><br><br>
+
+  <button class="button"><%= link_to "Join A playlist", join_playlist_path %></button>
+  <br><br><br>
+
+  <div class="gallery", link_to "http://localhost:3000/"></div>
 </div>
+</body>
+</html>
