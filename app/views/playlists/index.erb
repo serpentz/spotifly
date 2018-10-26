@@ -1,7 +1,7 @@
 <%if @user.playlist.songs %>
 
 <%=@user.playlist.songs.each do |song|%>
-<%=song.title%><%= link_to "delete this song", delete_song_path%>
+<%=song.title%>
 <%end%>
 <%end%>
 
