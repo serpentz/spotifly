@@ -9,7 +9,7 @@ body {
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 20px;
+  // font-size: 20px;
   line-height: 18px;
 }
 
@@ -52,29 +52,25 @@ td {
   padding: 0 5px 7px;
 }
 
+
 div.gallery {
+
   background-image: image-url("logo.png");
   background-size: 100%;
-    // margin: 10px;
+  background-repeat: no-repeat;
+
     display: block;
-   margin-left: auto;
-   margin-right: auto;
-    border: 1px solid #ccc;
-    float: center;
-    width: 200px;
-    height: 100px;
+
+   // margin: auto 20px;
+   float: right;
+   width: 150px;
+   height: 38px;
+   border-radius: 3%;
+
 }
 
 div.gallery:hover {
-    border: 2px solid white;
-}
-
-div.gallery img {
-    display: block;
-   margin-left: auto;
-   margin-right: auto;
-    width: 100%;
-    height: auto;
+    border: 1px solid #777;
 }
 
 div {
@@ -187,7 +183,11 @@ div {
 label {
   display: block;
 }
-
+div.text {
+  font-size: xx-large;
+  background-color: #f2f2f2;
+  text-align: center;
+}
   // {background-image: image-url('fire_breathing2.jpeg');
   //   background-repeat: no-repeat;
   //   background-size: 100%;

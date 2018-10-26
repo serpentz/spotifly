@@ -12,7 +12,7 @@
   <html>
   <style>
   input[type=text], select {
-      width: 100%;
+      width: 80%;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
@@ -22,7 +22,7 @@
   }
 
   input[type=submit] {
-      width: 100%;
+      width: 80%;
       background-color: #ff5252;
       color: white;
       padding: 14px 20px;
@@ -37,27 +37,28 @@
   }
 
   div {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
   }
   </style>
   <body>
 
-  <div>
+    <div class="wrapper">
+      <h2>Create an Account<h2>
       <%= form_for :user do |t|%>
-      <div class="font_xxlarge">Create an Account</div>
-        <!-- <ul class="center"> -->
-          <%=t.label :username%>
-          <%= t.text_field :username, placeholder:"Your username..."%>
-          <br>
-          <%=t.label :password%>
-          <%= t.text_field :password, placeholder:"Your password..."%>
-          <br><br>
-          <%= t.submit "Register" %><br><br>
-          <a target="_blank" href="http://localhost:3000/" >
-            <div class="gallery"><img></div>
-            <%end%>
+      <div class="font_medium">
+        <%=t.label :username%>
+        <%= t.text_field :username, placeholder:"Your username..."%>
+        <br>
+        <%=t.label :password%>
+        <%= t.text_field :password, placeholder:"Your password..."%>
+        <br><br>
+        <%= t.submit "Register" %>
+          <%end%></div><br><br>
           </div>
+          <a target="_blank" href="http://localhost:3000/" >
+            <div class="gallery"></div>
         </body>
         </html>
