@@ -1,9 +1,9 @@
 require 'pry'
 class PlaylistsController < ApplicationController
-  
+
 	def index
 		@user = User.find(session[:user_id])
-		
+
 	end
 
   def new
@@ -29,9 +29,10 @@ class PlaylistsController < ApplicationController
   def join
 
   	@playlist = Playlist.find_by(playlist_params)
-  
+
   	if(@playlist)
   		user = User.find(session[:user_id])
+      binding.pry
   		user.playlist = @playlist
   		user.save
   		@playlist.users << user
@@ -45,7 +46,7 @@ class PlaylistsController < ApplicationController
 
   end
 
-  private 
+  private
   	def playlist_params
   		params.require(:playlist).permit(:name, :passphrase)
 

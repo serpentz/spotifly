@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -32,27 +33,23 @@ div {
   background-color: #f2f2f2;
   padding: 3%;
   text-align: left;
-
 }
-
 </style>
-<body>
+  <body>
 
-  <div class="wrapper">
-    <h2>Welcome to Spotifly</h2>
-  <%= form_for :user, url:  check_creds_path , method: :post do |t|%>
+    <div class="wrapper">
+      <h2>Add a Song to Your Playlist</h2><br>
 
-  <%=t.label :username%>
-  <%= t.text_field :username, placeholder:"Your username..."%>
-  <br>
-  <%=t.label :password%>
-  <%= t.text_field :password, placeholder:"Your password..."%>
-  <br><br>
-  <%= t.submit "Login" %>
-  <div class="font_medium">Don't have an account?<br><%= link_to "Click to Register", new_user_path %></div>
-  <%end%>
-</div>
+      <%if @user.playlist.songs.any? %>
 
-  <div class="gallery", link_to"http://localhost:3000/"></div>
+      <%=@user.playlist.songs.each do |song|%>
+        <%=song.title%>
+
+        <%end%>
+        <%end%>
+        <%= link_to "Add a song", new_song_path%>
+      </div>
+
+      <div class="gallery" link_to "http://localhost:3000/"></div>
 </body>
 </html>
