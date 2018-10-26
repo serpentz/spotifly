@@ -9,6 +9,7 @@ post "users/new", to: 'users#create'
 get  "playlists/join", to: 'playlists#join_form', as: 'join_playlist'
 post "playlists/join", to: 'playlists#join'
 delete "songs/join", to: 'song#destroy', as: 'delete_song_path'
+patch "playlists", to: 'playlists#add_song'
 
 
 

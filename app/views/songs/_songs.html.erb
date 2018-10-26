@@ -1,9 +1,19 @@
 <% @spotify_songs.each do |track|%>
 
 <%= track.name%>
-<%= track.artist%>
-<%hashes = {song: {title: track.name , artist_name: track.artist.name }}%>
-<%= link_to "Add Song", playlists_path + hashes.to_param , method: :post  %>
-
-
+<%artists = ""%>
+<% track.artists.each do |artist|%>
+	<%artists += "#{artist.name},"  %>
+	<%= artist.name  %>
 	<%end%>
+
+<%= form_tag playlists_path , method: :patch  %>
+    <%= hidden_field_tag "song[title]", track.name%>
+     <%= hidden_field_tag "song[artist_name]", artists%>
+
+    <%= submit_tag  "Add Song"%>
+
+
+
+	
+		<%end%>

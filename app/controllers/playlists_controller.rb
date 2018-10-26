@@ -10,6 +10,18 @@ class PlaylistsController < ApplicationController
   		@playlist = Playlist.new
   end
 
+  def add_song
+        binding.pry
+      id = User.find(session[:user_id]).playlist.id
+      song_params[:playlist_id] = id
+
+      binding.pry
+      Song.create(song_params[song_params])
+
+      redirect_to playlists_path
+
+  end
+
   def create
 
   	@playlist = Playlist.create(playlist_params)
@@ -25,6 +37,7 @@ class PlaylistsController < ApplicationController
   		@playlist = Playlist.new
   		render :join
   end
+
 
   def join
 
@@ -48,7 +61,7 @@ class PlaylistsController < ApplicationController
 
   private
   	def playlist_params
-  		params.require(:playlist).permit(:name, :passphrase)
+  		params.require(:playlist,:song).permit(:name, :passphrase,:title, :artist_name)
 
   	end
 

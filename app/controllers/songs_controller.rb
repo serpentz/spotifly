@@ -1,9 +1,9 @@
 require 'json'
-require 'rest-client'
+require "rspotify"
 require 'pry'
 
 class SongsController < ApplicationController
-
+   skip_before_action :verify_authenticity_token
 
   # GET /songs
   # GET /songs.json
@@ -28,11 +28,11 @@ class SongsController < ApplicationController
     search = "#{params[:search]}"
     #  binding.pry
     #  key = Rails.application.secrets.spotify_api
+    RSpotify.authenticate(Rails.application.secrets.client_id, Rails.application.secrets.client_secret)
      @spotify_songs =  RSpotify::Track.search(search)
-    render '_songs', @spotify_songs
+    render '_songs'
       
-    #   response = RestClient.get(URL_SEARCH, {params: {q: search, type: "track", limit: 20}}, authorization: "bearer #{Rails.application.secrets.spotify_api}" )
-
+   
     #  Song.parse_search(Json.parse(response))
     # binding.pry
     # 0
