@@ -1,0 +1,9 @@
+<% @spotify_songs.each do |track|%>
+
+<%= track.name%>
+<%= track.artist%>
+<%hashes = {song: {title: track.name , artist_name: track.artist.name }}%>
+<%= link_to "Add Song", playlists_path + hashes.to_param , method: :post  %>
+
+
+	<%end%>

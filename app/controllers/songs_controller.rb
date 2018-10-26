@@ -22,12 +22,14 @@ class SongsController < ApplicationController
     @song = Song.new
   end
 
+  
+
   def create
     search = "#{params[:search]}"
     #  binding.pry
     #  key = Rails.application.secrets.spotify_api
-      
-    #   RSpotify::Artist.search('Arctic Monkeys')
+     @spotify_songs =  RSpotify::Track.search(search)
+    render '_songs', @spotify_songs
       
     #   response = RestClient.get(URL_SEARCH, {params: {q: search, type: "track", limit: 20}}, authorization: "bearer #{Rails.application.secrets.spotify_api}" )
 
