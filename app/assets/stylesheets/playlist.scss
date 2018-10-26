@@ -11,8 +11,8 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 15px;
   line-height: 18px;
-
 }
+
 .label {
     color: e7e7e7;
     padding: 10px;
@@ -20,6 +20,7 @@ body {
     text-align: left;
     font-size: 20px;
 }
+
 .success {background-color: #4CAF50;} /* Green */
 .info {background-color: #2196F3;} /* Blue */
 .warning {background-color: #ff9800;} /* Orange */
@@ -38,7 +39,6 @@ div.gallery {
    width: 4%;
    height: 8%;
    border-radius: 3%;
-
 }
 
 div.gallery:hover {
