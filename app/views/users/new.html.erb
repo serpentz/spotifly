@@ -42,9 +42,25 @@
     padding: 3%;
     text-align: left;
   }
+
+  .button {
+    background-color: #ff5252;
+    border-radius: 5%;
+    color: white;
+    padding: .5% 2%;
+    text-align: center;
+
+    display: inline-block;
+    font-size: medium;
+    cursor: pointer;
+  }
+
+  .button:hover{
+    background-color: #d50000;
+  }
+
   </style>
   <body>
-
     <div class="wrapper">
       <h2>Create an Account<h2>
       <%= form_for :user do |t|%>
@@ -58,7 +74,6 @@
         <%= t.submit "Register" %>
           <%end%></div><br><br>
           </div>
-          <a target="_blank" href="http://localhost:3000/" >
-            <div class="gallery"></div>
         </body>
+
         </html>
