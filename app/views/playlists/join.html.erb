@@ -49,11 +49,29 @@ div {
   padding: 5%;
   text-align: left;
 }
+
+  input[type=submit] {
+      width: 80%;
+      background-color: #ff5252;
+      color: white;
+      padding: 5%;
+      margin: 8px 0;
+      border: none;
+      border-radius: 3%;
+      cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+      background-color: #d50000;
+  }
+
+
+
 </style>
 
 <body>
   <div class="wrapper">
-<br>
+
 <h2>Join a Playlist</h2>
 
 
@@ -65,13 +83,12 @@ div {
 <%= form_for @playlist, url: join_playlist_path do |t|%>
 
   <%=t.label :name%>
-  <%= t.text_field :name%>
-  <br>
-  <%=t.label :passphrase%>
-  <%= t.text_field :passphrase%>
+  <%= t.text_field :name, placeholder: "Enter playlist name here..."%>
   <br><br>
-  <%= t.submit "Join" %>
-
+  <%=t.label :passphrase%>
+  <%= t.text_field :passphrase, placeholder: "Enter passphrase here..."%>
+  <br><br>
+  <%= t.submit "Join Playlist" %></div>
 
   <%end%>
 </body>
